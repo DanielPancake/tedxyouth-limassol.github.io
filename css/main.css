@@ -21,3 +21,13 @@ li {
     text-align: center;
     vertical-align: middle;
 }
+
+h1 {
+    font-size: 48px;
+    text-shadow: var(--tedx-red) -2px -2px 0, var(--tedx-red-dark) 2px 2px 0;
+}
+
+h1, h2 {
+    color: whitesmoke;
+    text-align: center;
+}

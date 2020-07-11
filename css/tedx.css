@@ -1,0 +1,23 @@
+#tedx .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1080px;
+    padding: 4px 32px;
+}
+
+#tedx .flex-container img {
+    align-self: center;
+}
+
+#tedx div.content {
+    flex: 1;
+    vertical-align: middle;
+}
+
+#tedx div.content p {
+    color: whitesmoke;
+    padding: 16px;
+    min-width: 300px;
+}
