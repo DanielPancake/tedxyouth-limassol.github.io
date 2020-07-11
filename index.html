@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>TedxYouth - Limassol</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/header.css">
+    </head>
+
+    <body>
+        <section id="header">
+            <div class="flex-container">
+                <div id="tedxlogo">
+                    <img src="images/ted.png">
+                </div>
+
+                <ul id="menu">
+                    <li><a>Home</a></li>
+                    <li><a><b>TedxYouth@Limassol 2020</b></a></li>
+                    <li><a>Our sponsors</a></li>
+                    <li><a>Team</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+
+                <div id="menu-toggler">
+                    <input type="checkbox" id="menu-checkbox">
+                    <label for="menu-checkbox">
+                        <div class="nav-icon">
+                            <div></div>
+                        </div>
+                    </label>
+
+                    <ul id="menu-mobile"></ul>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
+
+<script>
+    // Attention! Javascript ahead
+    // Copy menu options to mobile menu
+    var menu = document.getElementById("menu").children;
+    var menu_mobile = document.getElementById("menu-mobile");
+    
+    for (var element of menu) {
+        menu_mobile.appendChild(element.cloneNode(true));
+    }
+</script>

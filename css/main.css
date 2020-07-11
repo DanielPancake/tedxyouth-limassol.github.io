@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+* {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --tedx-white: #fff;
+    --tedx-red: #e62b1e;
+    --tedx-red-dark: #b70220;
+    --tedx-black: #000; 
+    --tedx-gray-dark: #1a1a1a;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+}
+
+li {
+    text-align: center;
+    vertical-align: middle;
+}
