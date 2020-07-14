@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: whitesmoke;
     margin: 0;
 }
 
@@ -22,12 +22,18 @@ li {
     vertical-align: middle;
 }
 
-h1 {
-    font-size: 48px;
-    text-shadow: var(--tedx-red) -2px -2px 0, var(--tedx-red-dark) 2px 2px 0;
+.shadow-gradient {
+    background-repeat: repeat-x;
+    background-size: contain;
+    image-rendering: pixelated;
+    height: 16px;
 }
 
-h1, h2 {
-    color: whitesmoke;
-    text-align: center;
+.shadow-gradient-black {
+    background-color: var(--tedx-red);
+    background-image: url(../images/gradient.png);
+}
+
+.shadow-gradient-red {
+    background-image: url(../images/gradient-red.png);
 }

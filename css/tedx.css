@@ -17,7 +17,15 @@
 }
 
 #tedx div.content p {
-    color: whitesmoke;
     padding: 16px;
     min-width: 300px;
+}
+
+#tedx h1, #tedx h2 {
+    text-align: center;
+}
+
+#what-is-ted {
+    background-color: var(--tedx-red);
+    color: whitesmoke;
 }

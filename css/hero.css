@@ -1,0 +1,48 @@
+#hero {
+    background-image: linear-gradient(rgba(26, 26, 26, 1),
+        rgba(26, 26, 26, 0.25)), url(../images/tedheroimage.jpg);
+
+    background-position: bottom;
+    background-size: cover;
+    height: calc(100vh - 77px);
+    min-height: 520px;
+}
+
+#hero .content {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 32px;
+    position: relative;
+    top: calc(25vh - 77px);
+}
+
+#hero h1 {
+    color: whitesmoke;
+    font-size: 72px;
+    font-weight: 900;
+    margin: 0;
+    text-shadow: var(--tedx-red-dark) 2px 2px 0;
+}
+
+#hero button {
+    background-color: var(--tedx-red);
+    border: none;
+    border-radius: 2px;
+    color: whitesmoke;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 16px 32px;
+    margin: 8px 0;
+    transition: 0.1s;
+}
+
+#hero button:hover {
+    background-color: var(--tedx-red-dark);
+    box-shadow: var(--tedx-black) 2px 2px 0;
+}
+
+@media screen and (max-width: 800px) {
+    #hero h1 {
+        font-size: 10vw;
+    }
+}
