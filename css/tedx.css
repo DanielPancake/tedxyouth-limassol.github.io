@@ -25,7 +25,37 @@
     text-align: center;
 }
 
-#what-is-ted {
+#tedx .background-red {
     background-color: var(--tedx-red);
     color: whitesmoke;
+}
+
+#tedx input {
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+#tedx input[type=text] {
+    border: inset 3px red;
+    padding: 16px 8px;
+    max-width: 400px;
+    margin-right: 16px;
+    width: 100%;
+}
+
+#tedx input[type=submit] {
+    background-color: var(--tedx-red);
+    border: solid 3px var(--tedx-red);
+    border-radius: 2px;
+    color: whitesmoke;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 16px 32px;
+    transition: 0.1s;
+    max-width: 200px;
+}
+
+#tedx input[type=submit]:hover {
+    background-color: var(--tedx-red-dark);
+    border: inset 3px red;
 }

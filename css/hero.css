@@ -35,7 +35,7 @@
     margin: 8px 0;
     transition: 0.1s;
 }
-
+  
 #hero button:hover {
     background-color: var(--tedx-red-dark);
     box-shadow: var(--tedx-black) 2px 2px 0;

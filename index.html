@@ -3,13 +3,17 @@
         <title>TedxYouth - Limassol</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+        <meta name="theme-color" content="#1a1a1a">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#1a1a1a">
         
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/hero.css">
         <link rel="stylesheet" href="css/tedx.css">
+        <link rel="stylesheet" href="css/footer.css">
     </head>
-
+    
     <body>
         <section id="header">
             <div class="flex-container">
@@ -18,15 +22,15 @@
                 </div>
 
                 <ul id="menu">
-                    <li><a>Home</a></li>
-                    <li><a><b>TedxYouth@Limassol 2020</b></a></li>
-                    <li><a>Our sponsors</a></li>
-                    <li><a>Team</a></li>
-                    <li><a>Contact</a></li>
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li><b>TedxYouth@Limassol 2020</b></li></a>
+                    <a href="#"><li>Our sponsors</li></a>
+                    <a href="#"><li>Team</li></a>
+                    <a href="#"><li>Contact</li></a>
                 </ul>
 
                 <div id="menu-toggler">
-                    <input type="checkbox" id="menu-checkbox">
+                    <input type="checkbox" id="menu-checkbox" onclick="menulocker();">
                     <label for="menu-checkbox">
                         <div class="nav-icon">
                             <div></div>
@@ -45,10 +49,10 @@
             </div>
         </section>
 
-        <div class="shadow-gradient shadow-gradient-black"></div>
+        <div class="shadow-gradient shadow-gradient-black" style="background-color: var(--tedx-red);"></div>
 
         <section id="tedx">
-            <div id="what-is-ted">
+            <div class="background-red">
                 <div class="flex-container">
                     <div class="content">
                         <h2>What is TED?</h2>
@@ -71,6 +75,13 @@
             </div>
 
             <div class="flex-container">
+                <div class="content">
+                    <h2>Subtitle</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet feugiat sem. Maecenas quis elit est. Cras arcu mi, interdum vel tristique quis, vehicula ut metus. Donec efficitur iaculis auctor. Aliquam risus dolor, egestas vitae nisi sit amet, sodales volutpat lacus. Proin lobortis ullamcorper viverra. Nullam a nulla non diam laoreet hendrerit. Proin in sapien tristique, tristique elit dictum, porta neque. Praesent elit nisi, posuere a placerat sit amet, mollis eu nisi. Nulla ac turpis a massa vulputate interdum. Vestibulum porttitor vulputate turpis quis porta. Proin mi nisl, dignissim at nulla vitae, faucibus euismod est. Nullam nec diam justo. Fusce auctor ut justo ut rhoncus. Curabitur semper turpis quis est molestie, sit amet placerat dolor cursus.</p>
+                </div>
+            </div>
+
+            <div class="flex-container">
                 <img src="images/content.png">
                 
                 <div class="content">
@@ -78,6 +89,39 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet feugiat sem. Maecenas quis elit est. Cras arcu mi, interdum vel tristique quis, vehicula ut metus. Donec efficitur iaculis auctor. Aliquam risus dolor, egestas vitae nisi sit amet, sodales volutpat lacus. Proin lobortis ullamcorper viverra. Nullam a nulla non diam laoreet hendrerit. Proin in sapien tristique, tristique elit dictum, porta neque. Praesent elit nisi, posuere a placerat sit amet, mollis eu nisi. Nulla ac turpis a massa vulputate interdum. Vestibulum porttitor vulputate turpis quis porta. Proin mi nisl, dignissim at nulla vitae, faucibus euismod est. Nullam nec diam justo. Fusce auctor ut justo ut rhoncus. Curabitur semper turpis quis est molestie, sit amet placerat dolor cursus.</p>
                 </div>
             </div>
+
+            <div class="shadow-gradient shadow-gradient-red" style="transform: scaleY(-1);"></div>
+
+            <div class="background-red" style="padding: 32px 0;">
+                <div class="flex-container">
+                    <form>
+                        <div class="content">
+                            <h2>Venue & Time are to be announced check the website for updates regarding speakers or signup to our newsletter</h2>
+                            <br>
+                        </div>
+                    
+                        <div style="margin: 0 auto; display: flex; justify-content: center;">
+                            <input type="text" placeholder="Email address" name="mail" required>
+                            <input type="submit" value="Subscribe">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="shadow-gradient shadow-gradient-red"></div>
+        
+            <div class="flex-container">                
+                <div class="content">
+                    <h2>Subtitle</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet feugiat sem. Maecenas quis elit est. Cras arcu mi, interdum vel tristique quis, vehicula ut metus. Donec efficitur iaculis auctor. Aliquam risus dolor, egestas vitae nisi sit amet, sodales volutpat lacus. Proin lobortis ullamcorper viverra. Nullam a nulla non diam laoreet hendrerit. Proin in sapien tristique, tristique elit dictum, porta neque. Praesent elit nisi, posuere a placerat sit amet, mollis eu nisi. Nulla ac turpis a massa vulputate interdum. Vestibulum porttitor vulputate turpis quis porta. Proin mi nisl, dignissim at nulla vitae, faucibus euismod est. Nullam nec diam justo. Fusce auctor ut justo ut rhoncus. Curabitur semper turpis quis est molestie, sit amet placerat dolor cursus.</p>
+                </div>
+
+                <img src="images/content.png">
+            </div>
+        </section>
+
+        <section id="footer">
+
         </section>
     </body>
 </html>
@@ -87,8 +131,48 @@
     // Copy menu options to mobile menu
     var menu = document.getElementById("menu").children;
     var menu_mobile = document.getElementById("menu-mobile");
+    var check_box = document.getElementById("menu-checkbox");
     
     for (var element of menu) {
-        menu_mobile.appendChild(element.cloneNode(true));
+        var e = element.cloneNode(true);
+
+        e.onclick = function() {
+            check_box.checked = false;
+            removeClass(document.body, "menu-locker");
+        }
+
+        menu_mobile.appendChild(e);
+    }
+    
+    function menulocker() {
+        toggleClass(document.body, "menu-locker");
+        scroll(0, 0);
+    }
+
+    function toggleClass(element, className) {
+        if (element.classList) {
+            element.classList.toggle(className);
+        } else {
+            var classes = element.className.split(" ");
+            var i = classes.indexOf(className);
+            
+            if (i >= 0) {
+                classes.splice(i, 1);
+            } else {
+                classes.push(className);
+                element.className = classes.join(" ");
+            }
+        }
+    }
+
+    function removeClass(element, className) {
+        if (element.classList) {
+            element.classList.remove(className);
+        } else {
+            var classes = element.className.split(" ");
+            var i = classes.indexOf(className);
+            
+            classes.splice(i, 1);
+        }
     }
 </script>
