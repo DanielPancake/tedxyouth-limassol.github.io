@@ -1,92 +1,143 @@
 <html>
     <head>
-        <title>TedxYouth - Limassol</title>
+        <title>TEDxYouth - Agiou Andreou</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
         <meta name="theme-color" content="#1a1a1a">
         <meta name="apple-mobile-web-app-status-bar-style" content="#1a1a1a">
-        
+
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/hero.css">
         <link rel="stylesheet" href="css/tedx.css">
         <link rel="stylesheet" href="css/footer.css">
+
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     </head>
-    
+
     <body>
-        <section id="header">
+        <section id="header" class="color-changer" data-color="#1a1a1a">
             <div class="flex-container">
                 <div id="tedxlogo">
                     <img src="images/ted.png">
                 </div>
 
-                <ul id="menu">
-                    <a href="#"><li>Home</li></a>
-                    <a href="#"><li><b>TedxYouth@Limassol 2020</b></li></a>
-                    <a href="#"><li>Our sponsors</li></a>
-                    <a href="#"><li>Team</li></a>
-                    <a href="#"><li>Contact</li></a>
-                </ul>
+                <div id="menu">
+                    <div class="menu-option dropdown">
+                        <a class="menu-option-head" href="#">Home</a>
+
+                        <div class="dropdown-content">
+                            <a href="#what-is-tedx">What is TEDx</a>
+                            <a href="#about">About TED</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-option">
+                        <a href="#"><b>TedxYouth@AgiouAndreou</b></a>
+                    </div>
+
+                    <div class="menu-option">
+                        <a href="#team">Our Team</a>
+                    </div>
+
+                    <div class="menu-option">
+                        <a href="#sponsors">Sponsors</a>
+                    </div>
+                </div>
 
                 <div id="menu-toggler">
                     <input type="checkbox" id="menu-checkbox" onclick="menulocker();">
                     <label for="menu-checkbox">
-                        <div class="nav-icon">
-                            <div></div>
-                        </div>
-                    </label>
+                            <div class="nav-icon">
+                                <div></div>
+                            </div>
+                        </label>
 
-                    <ul id="menu-mobile"></ul>
+                    <div id="menu-mobile"></div>
                 </div>
             </div>
         </section>
 
         <section id="hero">
             <div class="content">
-                <h1>Very cool hero header for TED also long</h1>
-                <button>&raquo; Watch now &laquo;</button>
+                <h1>Example multiline text for TEDx event</h1>
+                <button>&raquo; Join us! &laquo;</button>
             </div>
         </section>
 
         <div class="shadow-gradient shadow-gradient-black" style="background-color: var(--tedx-red);"></div>
 
         <section id="tedx">
+            <div class="background-red color-changer" data-color="#e62b1e">
+                <div class="flex-container">
+                    <div class="content">
+                        <h1 id="what-is-tedx">What is TEDx?</h1>
+                        <p class="text-justify"><b>x = independently organized TED event</b><br><br>TEDx is an event formed on a community-by-community basis, where local gatherings are organized to hear idea-focused performances. TEDx encourages speakers to discuss a range of issues and
+                            to cultivate an inspirational environment. TEDx events are planned and coordinated independently by local volunteers, which makes every event unique and from the heart. Just like TED, TEDx strives to nurture inspiration, learning
+                            and to provoke conversations that matter, in a suite of short talks. The events are not organized with an emphasis on any commercial, religious or political agenda. Moreover, TEDx does not focus solely on entrepreneurship, technology
+                            or business - the aim is to promote diversity as well. Another aim of TEDx is to provide a platform for individuals who often do not have one. This means that a TEDx event is not a platform for professional or motivational speakers.
+                            Overall, the goal of TEDx is to spark connection, conversation and community.</p>
+                    </div>
+                </div>
+
+                <div class="flex-container">
+                    <div class="content">
+                        <h2>What is TEDxYouth?</h2>
+                        <p class="text-justify">TEDxYouth is an event held by the youth, adults, or both. Here, the youth finds an opportunity to raise any topic that is interesting to kids and the youth. However, the youth can, of course, present other subjects! The size of the event has to be up to 100 guests. The main target audience of a TEDxYouth event are young people from local communities, but this does not limit the audience to young people only. The themes for the TEDxYouth events should be broad, featuring a diversity of topics and speakers from various disciplines. Similarly to TED, TEDxYouth aspires to motivate and open up doors to influential conversations and debates among the youth!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shadow-gradient shadow-gradient-red"></div>
+
+            <div class="flex-container color-changer" data-color="#fffff">
+                <div class="content">
+                    <h2>Our values as a youth event</h2>
+                    <ol>
+                        <li>A balance of individuality and togetherness - we appreciate every young adult’s individual vision, which we believe can thrive in conversations that truly matter; we encourage teamwork and mutual respect within our team.</li>
+                        <br>
+                        <li>Innovation - as the first TEDxYouth event in Cyprus we welcome the sharing of new concepts, so that valuable and potentially world-changing ideas are not lost.</li>
+                        <br>
+                        <li>Integrity - we do our best in making our work transparent, whilst prioritizing personal accountability for the smallest details to provide the best quality of service.</li>
+                        <br>
+                        <li>Diversity in content, community and crew - we ensure that the experience we provide nurtures understanding of others ’beliefs and the consequent change in outlook.</li>
+                    </ol>
+                </div>
+
+                <img src="images/content.png">
+            </div>
+
+            <div class="shadow-gradient shadow-gradient-red" style="transform: scaleY(-1);"></div>
+
             <div class="background-red">
                 <div class="flex-container">
                     <div class="content">
-                        <h2>What is TED?</h2>
-                        <p><b>=></b> (example text) TED is a nonprofit devoted to spreading ideas, usually in the form of short, powerful talks (18 minutes or less). TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics — from science to business to global issues — in more than 100 languages. Meanwhile, independently run TEDx events help share ideas in communities around the world.</p>
+                        <h2>TEDxYouth@AgiouAndreou</h2>
+                        <p class="text-justify">We are the first ever TEDxYouth event in Cyprus, organized thanks to the initiative of the IMS Private School. Our team consists entirely of young adults and as a community-based event we aspire to host an event where the youth of all genders and nationalities in Cyprus has a chance to express themselves and spread ideas that are beyond everyday considerations.</p>
                     </div>
-                    
-                    <img src="images/content.png">
                 </div>
             </div>
 
             <div class="shadow-gradient shadow-gradient-red"></div>
 
             <div class="flex-container">
-                <div class="content">
-                    <h2>Subtitle</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet feugiat sem. Maecenas quis elit est. Cras arcu mi, interdum vel tristique quis, vehicula ut metus. Donec efficitur iaculis auctor. Aliquam risus dolor, egestas vitae nisi sit amet, sodales volutpat lacus. Proin lobortis ullamcorper viverra. Nullam a nulla non diam laoreet hendrerit. Proin in sapien tristique, tristique elit dictum, porta neque. Praesent elit nisi, posuere a placerat sit amet, mollis eu nisi. Nulla ac turpis a massa vulputate interdum. Vestibulum porttitor vulputate turpis quis porta. Proin mi nisl, dignissim at nulla vitae, faucibus euismod est. Nullam nec diam justo. Fusce auctor ut justo ut rhoncus. Curabitur semper turpis quis est molestie, sit amet placerat dolor cursus.</p>
-                </div>
-                
                 <img src="images/content.png">
-            </div>
 
-            <div class="flex-container">
                 <div class="content">
-                    <h2>Subtitle</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet feugiat sem. Maecenas quis elit est. Cras arcu mi, interdum vel tristique quis, vehicula ut metus. Donec efficitur iaculis auctor. Aliquam risus dolor, egestas vitae nisi sit amet, sodales volutpat lacus. Proin lobortis ullamcorper viverra. Nullam a nulla non diam laoreet hendrerit. Proin in sapien tristique, tristique elit dictum, porta neque. Praesent elit nisi, posuere a placerat sit amet, mollis eu nisi. Nulla ac turpis a massa vulputate interdum. Vestibulum porttitor vulputate turpis quis porta. Proin mi nisl, dignissim at nulla vitae, faucibus euismod est. Nullam nec diam justo. Fusce auctor ut justo ut rhoncus. Curabitur semper turpis quis est molestie, sit amet placerat dolor cursus.</p>
-                </div>
-            </div>
+                    <h2 id="about">About TED</h2>
+                    <p class="text-justify" style="padding-bottom:0; margin-bottom:0;">TED is a non-profit global speaking platform, where creative individuals unite in their mission to spread ideas, discuss global issues and express their opinions. Here, inspired thinkers are free to share their knowledge and understanding of the world. Founded in 1984, TED was the brainchild of
+                        <br><br>
+                        Richard Saul Wurman, who cooperated with Harry Marks. In 1990, the TED Conference became an annual event in Monterey, California, attracting a vast and open-minded audience from many disciplines. Given the growing attendance, the years of 2001-2006 witnessed an expansion of the TED family - TEDGlobal (a newly created conference), the TED Prize (winners are granted one wish to change the world), TED Talks (TED content is released online). Once influential minds united and helped to create the conditions necessary for the spreading of ideas, 2012 marked the year of one billion video views of TED Talks. To this day, TED Conferences and Talks continue to inspire, motivate and thrill attendees.
+                        <br><br>
+                        TED provides short but powerful speeches (not more than 18 minutes long) which cover a vast amount of topics - from science to global issues, and many more. TED’s foremost aims are to foster a friendly and learning community and to change attitudes, lives and the world with the power of ideas. These aims are achieved through free TED Talks videos, TED Conferences, free TED Fellowships and TED-Ed video lessons. TED Talks on the web are available for free and are translated to many different languages, giving a brilliant opportunity for ideas to be heard and seen worldwide.
+                    </p>
 
-            <div class="flex-container">
-                <img src="images/content.png">
-                
-                <div class="content">
-                    <h2>Subtitle</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet feugiat sem. Maecenas quis elit est. Cras arcu mi, interdum vel tristique quis, vehicula ut metus. Donec efficitur iaculis auctor. Aliquam risus dolor, egestas vitae nisi sit amet, sodales volutpat lacus. Proin lobortis ullamcorper viverra. Nullam a nulla non diam laoreet hendrerit. Proin in sapien tristique, tristique elit dictum, porta neque. Praesent elit nisi, posuere a placerat sit amet, mollis eu nisi. Nulla ac turpis a massa vulputate interdum. Vestibulum porttitor vulputate turpis quis porta. Proin mi nisl, dignissim at nulla vitae, faucibus euismod est. Nullam nec diam justo. Fusce auctor ut justo ut rhoncus. Curabitur semper turpis quis est molestie, sit amet placerat dolor cursus.</p>
+                    <p class="links">
+                        <a href="https://www.facebook.com/TED" target="_blank"><img src="images/facebook.svg" class="svg-link"/></a>
+                        <a href="https://twitter.com/TEDTalks" target="_blank"><img src="images/twitter.svg" class="svg-link"/></a>
+                    </p>
                 </div>
             </div>
 
@@ -99,7 +150,7 @@
                             <h2>Venue & Time are to be announced check the website for updates regarding speakers or signup to our newsletter</h2>
                             <br>
                         </div>
-                    
+
                         <div style="margin: 0 auto; display: flex; justify-content: center;">
                             <input type="text" placeholder="Email address" name="mail" required>
                             <input type="submit" value="Subscribe">
@@ -109,34 +160,112 @@
             </div>
 
             <div class="shadow-gradient shadow-gradient-red"></div>
+        </section>
         
+        <section id="team">
             <h1>Our Team</h1>
             <div class="flex-container">
                 <div class="member">
-                    <img src="images/content.png">
-                    <p>TEXT</p>
+                    <div class="image-wrapper">
+                        <img src="images/team/Nadia.jpeg">
+                        <div class="image-wrapper-text">
+                            <p>Nadia</p>
+                        </div>
+                    </div>
+                    <p>I’m Nadia and I’m the lead in finance. I love listening to and playing music of all genres, drawing
+                        the beautiful moments in life and helping people!</p>
                 </div>
 
                 <div class="member">
-                    <img src="images/content.png">
-                    <p>TEXT</p>
+                    <div class="image-wrapper">
+                        <img src="images/team/Kate.jpeg">
+                        <div class="image-wrapper-text">
+                            <p>Kat</p>
+                        </div>
+                    </div>
+                    <p>My name is Kat and I am the “adult” co-organizer of the event. My hobbies include consuming
+                        coffee (a lot of it) and reading books. I’m always trying to learn new things (which I'm hoping to do
+                        through participating in this event) and I’m open for discussion on literally any topic.</p>
+                </div>
+                
+                <div class="member">
+                    <div class="image-wrapper">
+                        <img src="images/team/Eleftheria.jpeg">
+                        <div class="image-wrapper-text">
+                            <p>Eleftheria</p>
+                        </div>
+                    </div>
+                    <p>Hey, I’m Eleftheria, but you can call me Ria. I am the lead organizer as I consider myself to be
+                        responsible; if they tell you otherwise they might know something I don’t or are lying. I am really
+                        intrigued by human behavior and understand body language as I consider that one of the
+                        languages I speak.</p>
                 </div>
 
                 <div class="member">
-                    <img src="images/content.png">
-                    <p>TEXT</p>
+                    <div class="image-wrapper">
+                        <img src="images/team/Jess.jpeg">
+                        <div class="image-wrapper-text">
+                            <p>Jess</p>
+                        </div>
+                    </div>
+                    <p>My name is Jess and I’m the Volunteers lead. I love being busy and helping about, especially
+                        when it concerns our environment and community. I learn a lot about the environment while being
+                        a scout!</p>
                 </div>
-            </div>
 
-            <div class="flex-container">                
-                <div class="content">
-                    <h2>Subtitle</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet feugiat sem. Maecenas quis elit est. Cras arcu mi, interdum vel tristique quis, vehicula ut metus. Donec efficitur iaculis auctor. Aliquam risus dolor, egestas vitae nisi sit amet, sodales volutpat lacus. Proin lobortis ullamcorper viverra. Nullam a nulla non diam laoreet hendrerit. Proin in sapien tristique, tristique elit dictum, porta neque. Praesent elit nisi, posuere a placerat sit amet, mollis eu nisi. Nulla ac turpis a massa vulputate interdum. Vestibulum porttitor vulputate turpis quis porta. Proin mi nisl, dignissim at nulla vitae, faucibus euismod est. Nullam nec diam justo. Fusce auctor ut justo ut rhoncus. Curabitur semper turpis quis est molestie, sit amet placerat dolor cursus.</p>
+                <div class="member">
+                    <div class="image-wrapper">
+                        <img src="images/team/Ksenia.jpeg">
+                        <div class="image-wrapper-text">
+                            <p>Ksenia</p>
+                        </div>
+                    </div>
+                    <p>I'm Ksenia and I'm responsible for media creation in our marketing team. I love taking pictures of
+                        the things and the people that inspire me, playing board games and taking on more than I can ever
+                        realistically manage.</p>
                 </div>
 
-                <img src="images/content.png">
+                <div class="member">
+                    <div class="image-wrapper">
+                        <img src="images/team/Mariana.jpeg">
+                        <div class="image-wrapper-text">
+                            <p>Mariana</p>
+                        </div>
+                    </div>
+                    <p>My name is Mariana. I write or edit texts for most of our media. I also come up with ideas that
+                        make others question my mental health and talk too loud sometimes. And yeah, I do theatre which
+                        means I’ll do anything for attention.</p>
+                </div>
             </div>
         </section>
+
+        <section id="sponsors">
+            <h1>Sponsors</h1>
+            <h2>We are proudly sponsored by...</h2>
+
+            <div class="flex-container">
+                <img src="images/sponsors/svaleno.png">
+
+                <div class="content">
+                    <p class="text-justify">Svaleno Properties was founded in 2008 by Mr. Avgoustinos Louca, who envisioned creating a trustful, solid, self-funded company and at the same time combining quality and affordable prices. Svaleno Properties means more than just securing financial collateral. It is about creating a trusted partnership that will bring you continued prosperity. Focused on working with the best-in-class partners, we provide value to our clients in terms of quality, design, service, support and investment returns.</p>
+                </div>
+            </div>
+
+            <div class="flex-container" style="flex-wrap: wrap-reverse;">
+                <div class="content">
+                    <p class="text-justify">Baker Tilly South East Europe is a full-service accounting and advisory firm, that offers industry-specialized services in assurance, tax and advisory. Baker Tilly South East Europe is an independent member of Baker Tilly International. Baker Tilly International is one of the world’s leading networks, uniting independent companies to provide top-quality professional services in both international and regional markets.</p>
+                </div>
+
+                <img src="images/sponsors/bakertilly.png">
+            </div>
+
+            <div class="flex-container">
+                <div class="content">
+                    <p class="text-justify">Proudserve Group Limited is a group of companies, which is involved in the provision of fiduciary, management and administration services relating to companies registered and operating in Cyprus.</p>
+                    <img src="images/sponsors/proudserve_group.png" style="display: block; margin: 0 auto;">
+                </div>
+            </div>
+        </section> 
 
         <section id="footer">
 
@@ -146,22 +275,66 @@
 
 <script>
     // Attention! Javascript ahead
-    // Copy menu options to mobile menu
     var menu = document.getElementById("menu").children;
-    var menu_mobile = document.getElementById("menu-mobile");
-    var check_box = document.getElementById("menu-checkbox");
-    
+    var menuMobile = document.getElementById("menu-mobile");
+    var checkBox = document.getElementById("menu-checkbox");
+
+    var colorChangers = Array.from(document.getElementsByClassName("color-changer")).reverse();
+    var team = Array.from(document.getElementById("team").querySelector(".flex-container").children);
+
+    function members() {
+        var _off = team[0].offsetTop;
+        var breaks = Array.from(document.getElementsByClassName("break"));
+
+        for (var _break of breaks) {
+            _break.remove();
+        }
+
+        for (var i = 1; i < team.length; i++) {
+            // Weird attempt to fix
+            if (team[i].offsetTop == _off || Math.abs(team[i].offsetTop - _off) < 100) {
+                var node = document.createElement("hr");
+                toggleClass(node, "break");
+
+                team[i].before(node);
+            } else {
+                _off = team[i].offsetTop;
+            }
+        }
+    }
+
+    members();
+
+    window.onresize = function() {
+        checkBox.checked = false;
+        removeClass(document.body, "menu-locker");
+
+        members();
+    };
+
+    window.onscroll = function() {
+        for (var i = 0; i < colorChangers.length; i++) {
+            var colorChanger = colorChangers[i];
+
+            if (window.scrollY > colorChanger.offsetTop) {
+                document.querySelector('meta[name="theme-color"]').setAttribute("content", colorChanger.dataset.color);
+                document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute("content", colorChanger.dataset.color);
+                break;
+            }
+        }
+    };
+
     for (var element of menu) {
         var e = element.cloneNode(true);
 
         e.onclick = function() {
-            check_box.checked = false;
+            checkBox.checked = false;
             removeClass(document.body, "menu-locker");
         }
 
-        menu_mobile.appendChild(e);
+        menuMobile.appendChild(e);
     }
-    
+
     function menulocker() {
         toggleClass(document.body, "menu-locker");
         scroll(0, 0);
@@ -173,7 +346,7 @@
         } else {
             var classes = element.className.split(" ");
             var i = classes.indexOf(className);
-            
+
             if (i >= 0) {
                 classes.splice(i, 1);
             } else {
@@ -189,7 +362,7 @@
         } else {
             var classes = element.className.split(" ");
             var i = classes.indexOf(className);
-            
+
             classes.splice(i, 1);
         }
     }

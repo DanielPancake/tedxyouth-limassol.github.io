@@ -1,41 +1,28 @@
-#tedx .flex-container {
+#tedx .flex-container, #team .flex-container, #sponsors .flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 0 auto;
     max-width: 1080px;
     padding: 4px 32px;
 }
 
-#tedx .flex-container img {
+#tedx .flex-container img, #sponsors .flex-container img {
     align-self: center;
 }
 
-#tedx div.content {
+#tedx div.content, #sponsors div.content {
     flex: 1;
-    vertical-align: middle;
 }
 
-#tedx div.content p {
+#tedx div.content p, #sponsors div.content p {
     padding: 16px;
     min-width: 300px;
-}
-
-#tedx h1, #tedx h2 {
-    text-align: center;
 }
 
 #tedx .background-red {
     background-color: var(--tedx-red);
     color: whitesmoke;
-}
-
-#tedx .member {
-    margin: 0 8px;
-}
-
-#tedx .member p {
-    text-align: center;
 }
 
 #tedx input {
@@ -58,7 +45,7 @@
     color: whitesmoke;
     cursor: pointer;
     font-weight: 700;
-    padding: 16px 32px;
+    padding: 16px 24px;
     transition: 0.1s;
     max-width: 200px;
 }
@@ -66,4 +53,63 @@
 #tedx input[type=submit]:hover {
     background-color: var(--tedx-red-dark);
     border: inset 3px red;
+}
+
+#team .flex-container {
+    flex-wrap: wrap-reverse;
+}
+
+#team .member {
+    flex: 1;
+    margin: 0 8px 32px 8px;
+    min-width: 200px;
+}
+
+#team .member p {
+    text-align: center;
+}
+
+#team .image-wrapper img {
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#team .image-wrapper:hover {
+    box-shadow: 5px 5px 0 var(--tedx-red);
+    transform: translate(-3px, -3px);
+}
+
+#team .image-wrapper:hover > .image-wrapper-text {
+    height: 50px;
+}
+
+#team .image-wrapper {
+    margin: 0 auto;
+    border-radius: 5px;
+    position: relative;
+    transition: .25s;
+    max-width: 300px;
+}
+
+#team .image-wrapper-text {
+    background-color: var(--tedx-red-transparent);
+    bottom: 0;
+    border-radius: 0 0 5px 5px;
+    color: white;
+    font-weight: 600;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    transition: .25s;
+    width: 100%;
+}
+
+#sponsors img {
+    margin: 0 16px;
+    min-width: 200px;
+    width: 40%;
 }

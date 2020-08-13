@@ -1,18 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
-
 * {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
     --tedx-red: #e62b1e;
+    --tedx-red-transparent: #e62b1e9c;
     --tedx-red-dark: #b70220;
+    --tedx-red-darker: #8f0025;
     --tedx-gray-dark: #1a1a1a;
+
+    --title: 24pt;
+    --subtitle: 18pt;
+    --text: 12pt;
+}
+
+@media screen and (max-width: 800px) {
+    :root {
+        --title: 24pt;
+        --subtitle: 18pt;
+        --text: 10pt;
+    }
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: white;
     margin: 0;
 }
 
@@ -28,12 +43,40 @@ body::-webkit-scrollbar {
     width: 0.5rem;
 }
 
-li {
+h1, h2 {
     text-align: center;
 }
 
 h1 {
-    font-size: 24pt;
+    font-size: var(--title);
+    margin: 25px 0;
+}
+
+h2 {
+    font-size: var(--subtitle);
+    margin: 20px 0;
+}
+
+p {
+    margin: 13px 0;
+}
+
+p, li {
+    font-size: var(--text);
+}
+
+ol {
+    padding: 16px;
+    min-width: 200px;
+}
+
+.break {
+    margin-bottom: 32px;
+    width: 1px;
+}
+
+.text-justify {
+    text-align: justify;
 }
 
 .menu-locker {
@@ -54,4 +97,20 @@ h1 {
 
 .shadow-gradient-red {
     background-image: url(../images/gradient-red.png);
+}
+
+.svg-link {
+    transition: 0.25s;
+}
+
+.svg-link:hover {
+    filter: drop-shadow(-2px 0px 0 black);
+    transform: rotateZ(360deg) scale(2);
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 32px 0;
 }

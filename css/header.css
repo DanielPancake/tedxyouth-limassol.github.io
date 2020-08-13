@@ -12,49 +12,93 @@
 
 #tedxlogo img {
     padding: 0 32px;
-    width: 128px;
+    width: 100%;
 }
 
 #menu {
-    flex: 1;
-    list-style: none;
-    margin: auto;
-    padding: 0;
+    align-self: stretch;
+    display: flex;
 }
 
-#menu a {
+#menu .menu-option {
+    display: table;
+    height: 100%;
+}
+
+#menu .menu-option a {
     color: #a19c9c;
     display: table-cell;
     font-size: 14px;
     padding: 20px;
+    position: relative;
+    text-align: center;
     text-decoration: none;
     transition: 0.2s;
     vertical-align: middle;
-    width: 0.1%;
 }
 
-#menu a:hover {
+#menu .dropdown {
+    min-width: 100px;
+    position: relative;
+}
+
+#menu .menu-option a:hover {
     background-color: var(--tedx-red-dark);
-    color: whitesmoke;
+    color: white;
 }
 
-#menu-mobile {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+#menu .dropdown:hover > a {
+    background-color: var(--tedx-red-darker);
+    color: white;
 }
 
-#menu-mobile a {
+#menu .dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+#menu .dropdown-content {
+    background-color: whitesmoke;
+    box-shadow: black 0 25px 50px;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+#menu .dropdown-content a {
+    color: black;
+    display: block;
     text-decoration: none;
 }
 
-#menu-mobile li {
+#menu-mobile {
+    background-color: var(--tedx-gray-dark);
+    height: calc(100vh - 80px);
+    left: 0;
+    position: absolute;
+    top: 118px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    z-index: 1;
+}
+
+#menu-mobile a:not(.menu-option-head) {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+#menu-mobile a {
     color: whitesmoke;
     font-size: 16px;
     padding: 20px 0;
+    text-align: center;
 }
 
-#menu-mobile li:hover {
+#menu-mobile a:hover {
     background-color: var(--tedx-red-dark);
 }
 
@@ -66,32 +110,20 @@
     display: none;
 }
 
-#menu-checkbox + label:hover {
+#menu-checkbox+label:hover {
     cursor: pointer;
 }
 
-#menu-checkbox:checked + label + #menu-mobile {
+#menu-checkbox:checked+label+#menu-mobile {
     transform: translateX(0);
-}
-
-#menu-mobile {
-    background-color: var(--tedx-gray-dark);
-    height: calc(100vh - 77px);
-    left: 0;
-    position: absolute;
-    top: 77px;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    width: 100%;
-    z-index: 1;
 }
 
 .nav-icon {
     width: 35px;
 }
-  
-.nav-icon:after, 
-.nav-icon:before, 
+
+.nav-icon:after,
+.nav-icon:before,
 .nav-icon div {
     background-color: whitesmoke;
     border-radius: 2px;
@@ -103,16 +135,16 @@
     transition: all .2s ease-in-out;
 }
 
-#menu-checkbox:checked + label .nav-icon:before {
+#menu-checkbox:checked+label .nav-icon:before {
     transform: translateY(8px) rotate(135deg) scale(0.85);
 }
 
-#menu-checkbox:checked + label .nav-icon:after {
+#menu-checkbox:checked+label .nav-icon:after {
     box-shadow: none;
     transform: translateY(-8px) rotate(-135deg) scale(0.85);
 }
 
-#menu-checkbox:checked + label .nav-icon div {
+#menu-checkbox:checked+label .nav-icon div {
     transform: translateY(16px) scale(0.85);
 }
 
@@ -121,8 +153,13 @@
         display: none;
     }
 
+    .menu-option-head {
+        display: none;
+    }
+
     #header {
-        padding: 20px 0;
+        height: 86px;
+        padding: 16px 0px;
     }
 }
 

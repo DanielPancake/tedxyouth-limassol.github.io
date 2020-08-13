@@ -1,10 +1,10 @@
 #hero {
     background-image: linear-gradient(rgba(26, 26, 26, 1),
-        rgba(26, 26, 26, 0.25)), url(../images/tedheroimage.jpg);
+        rgba(26, 26, 26, 0.25)), url(../images/tedheroimage.png);
 
     background-position: bottom;
     background-size: cover;
-    height: calc(100vh - 77px);
+    height: calc(100vh - 80px);
     min-height: 520px;
 }
 
@@ -13,7 +13,7 @@
     max-width: 960px;
     padding: 32px;
     position: relative;
-    top: calc(25vh - 77px);
+    top: calc(20vh - 75px);
 }
 
 #hero h1 {
@@ -28,11 +28,12 @@
     background-color: var(--tedx-red);
     border: none;
     border-radius: 2px;
-    color: whitesmoke;
+    color: white;
     cursor: pointer;
     font-weight: 700;
-    padding: 16px 32px;
-    margin: 8px 0;
+    display: block;
+    padding: 18px 72px;
+    margin: 8px auto;
     transition: 0.1s;
 }
   
