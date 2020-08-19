@@ -4,7 +4,7 @@
 
     background-position: bottom;
     background-size: cover;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 79px);
     min-height: 520px;
 }
 
@@ -37,7 +37,7 @@
     transition: 0.1s;
 }
   
-#hero button:hover {
+#hero button:hover, #hero button:focus {
     background-color: var(--tedx-red-dark);
     box-shadow: var(--tedx-black) 2px 2px 0;
 }
@@ -45,5 +45,87 @@
 @media screen and (max-width: 800px) {
     #hero h1 {
         font-size: 10vw;
+    }
+}
+
+.modal-window {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.modal-window-content {
+    background-color: whitesmoke;
+    border-radius: 2px;
+    max-width: 525px;
+    padding: 20px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 100vh);
+    width: 80%;
+}
+
+.modal-window-content :not(.links) a {
+    background-image: linear-gradient(var(--tedx-red), var(--tedx-red));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.modal-window-content :not(.links) a:hover {
+    background-size: 100% 2px;
+    color: var(--tedx-red);
+}
+
+.modal-window-content h1 {
+    background-color: var(--tedx-red);
+}
+
+@keyframes fading-in {
+    from { opacity: 0; } 
+    to { opacity: 1; }
+}
+
+@keyframes fading-out {
+    from { opacity: 1; } 
+    to { opacity: 0; }
+}
+
+@keyframes slide-in {
+    70% {
+        filter: none;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        filter: drop-shadow(-5px 5px 0 var(--tedx-red-dark));
+        transform: translate(calc(-50% + 5px), calc(-50% - 5px));
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        filter: drop-shadow(-5px 5px 0 var(--tedx-red-dark));
+        transform: translate(calc(-50% + 5px), calc(-50% - 5px));
+    }
+
+    30% {
+        filter: none;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        transform: translate(-50%, 100vh);
     }
 }

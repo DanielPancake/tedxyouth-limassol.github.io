@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 * {
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-family: 'Inter', Arial, sans-serif; 
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
@@ -8,21 +8,21 @@
 
 :root {
     --tedx-red: #e62b1e;
-    --tedx-red-transparent: #e62b1e9c;
+    --tedx-red-transparent: #e62b1e70;
     --tedx-red-dark: #b70220;
     --tedx-red-darker: #8f0025;
     --tedx-gray-dark: #1a1a1a;
 
-    --title: 24pt;
-    --subtitle: 18pt;
-    --text: 12pt;
+    --title: 34px;
+    --subtitle: 25px;
+    --text: 14px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     :root {
-        --title: 24pt;
-        --subtitle: 18pt;
-        --text: 10pt;
+        --title: 6vw;
+        --subtitle: 5vw;
+        --text: 3.5vw;
     }
 }
 
@@ -44,17 +44,18 @@ body::-webkit-scrollbar {
 }
 
 h1, h2 {
+    margin: 32px 0 16px 0;
     text-align: center;
 }
 
 h1 {
     font-size: var(--title);
-    margin: 25px 0;
+    font-weight: 900;
 }
 
 h2 {
     font-size: var(--subtitle);
-    margin: 20px 0;
+    font-weight: 800;
 }
 
 p {
@@ -65,14 +66,18 @@ p, li {
     font-size: var(--text);
 }
 
-ol {
-    padding: 16px;
+ul, ol {
+    margin: 13px 0;
     min-width: 200px;
+    padding: 16px;
 }
 
 .break {
-    margin-bottom: 32px;
-    width: 1px;
+    background: linear-gradient(180deg, white 0%, var(--tedx-red) 20%, white 80%);
+    border: none;
+    border-radius: 2px;
+    margin: 8px;
+    width: 3px;
 }
 
 .text-justify {
@@ -99,6 +104,11 @@ ol {
     background-image: url(../images/gradient-red.png);
 }
 
+.popup-img:hover {
+    filter: drop-shadow(-5px 5px 0 var(--tedx-red));
+    transform: translate(5px, -5px);
+}
+
 .svg-link {
     transition: 0.25s;
 }
@@ -111,6 +121,13 @@ ol {
 .links {
     display: flex;
     justify-content: space-evenly;
-    margin: 0;
-    padding: 32px 0;
+    margin: 13px 0;
+}
+
+.outline {
+    text-shadow: var(--tedx-red) -1px -1px 0,
+    var(--tedx-red) 1px -1px 0,
+    var(--tedx-red) -1px 1px 0,
+    var(--tedx-red) 1px 1px 0,
+    var(--tedx-red-dark) 2px 2px 0 !important;
 }

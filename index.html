@@ -15,6 +15,8 @@
 
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+        <script src="js/classes.js"></script>
     </head>
 
     <body>
@@ -35,7 +37,7 @@
                     </div>
 
                     <div class="menu-option">
-                        <a href="#"><b>TedxYouth@AgiouAndreou</b></a>
+                        <a href="#event"><b>TedxYouth@AgiouAndreou</b></a>
                     </div>
 
                     <div class="menu-option">
@@ -63,7 +65,40 @@
         <section id="hero">
             <div class="content">
                 <h1>Example multiline text for TEDx event</h1>
-                <button>&raquo; Join us! &laquo;</button>
+                <button id="join-us">&raquo; Join us! &laquo;</button>
+                
+                <div id="join-us-window" class="modal-window" data-active=false>
+                    <div id="join-us-content" class="modal-window-content">
+                        <div class="shadow-gradient shadow-gradient-red" style="transform: scaleY(-1);"></div>
+                        <h1>JOIN US!</h1>
+                        <div class="shadow-gradient shadow-gradient-red"></div>
+
+                        <p class="text-justify">You can help by joining our team of volunteers. Your job can be anything at all:</p>
+                        
+                        <ul>
+                            <li>Performing</li>
+                            <li>Making your own speech</li>
+                            <li>Event Management</li>
+                            <li>Marketing & Social Media</li>
+                            <li>Budgeting</li>
+                            <li>Any other skill you might have</li>
+                        </ul>
+
+                        <p class="text-justify">To sign up make sure <a href="https://forms.gle/myZvJsdwuWvGry976">to complete the form</a> or <a href="tel:99156923">contact Jessica Thackeray</a>.
+                            <br><br>
+                            If you want to perform, get in touch with us on any social media / email and tell us about your passion or the idea that you want to present at the TEDxYouth conference this fall.
+                        </p>
+
+                        <div style="margin: 16px 0; width:100%;"></div>
+
+                        <p class="links">
+                            <a href="https://www.facebook.com/TEDxYouth.AgiouAndreou/" target="_blank"><img src="images/facebook.svg" class="svg-link"/></a>
+                            <a href="https://instagram.com/tedxyouth.agiou_andreou?igshid=srnpybbrns2n" target="_blank"><img src="images/instagram.svg" class="svg-link"/></a>
+                            <a href="https://mobile.twitter.com/tedxyouthcy" target="_blank"><img src="images/twitter.svg" class="svg-link"/></a>
+                            <a href="mailto:edxyouth.limassol@gmail.com"><img src="images/email.svg" class="svg-link"/></a>
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -72,8 +107,8 @@
         <section id="tedx">
             <div class="background-red color-changer" data-color="#e62b1e">
                 <div class="flex-container">
-                    <div class="content">
-                        <h1 id="what-is-tedx">What is TEDx?</h1>
+                    <div id="what-is-tedx" class="content">
+                        <h1>What is TEDx?</h1>
                         <p class="text-justify"><b>x = independently organized TED event</b><br><br>TEDx is an event formed on a community-by-community basis, where local gatherings are organized to hear idea-focused performances. TEDx encourages speakers to discuss a range of issues and
                             to cultivate an inspirational environment. TEDx events are planned and coordinated independently by local volunteers, which makes every event unique and from the heart. Just like TED, TEDx strives to nurture inspiration, learning
                             and to provoke conversations that matter, in a suite of short talks. The events are not organized with an emphasis on any commercial, religious or political agenda. Moreover, TEDx does not focus solely on entrepreneurship, technology
@@ -106,27 +141,33 @@
                     </ol>
                 </div>
 
-                <img src="images/content.png">
+                <div class="popup-img" id="photoshoot-bg"></div>
             </div>
 
             <div class="shadow-gradient shadow-gradient-red" style="transform: scaleY(-1);"></div>
 
-            <div class="background-red">
+            <div class="background-red color-changer" data-color="#e62b1e">
                 <div class="flex-container">
-                    <div class="content">
-                        <h2>TEDxYouth@AgiouAndreou</h2>
+                    <div id="event" class="content">
+                        <h1>TEDxYouth@AgiouAndreou</h1>
                         <p class="text-justify">We are the first ever TEDxYouth event in Cyprus, organized thanks to the initiative of the IMS Private School. Our team consists entirely of young adults and as a community-based event we aspire to host an event where the youth of all genders and nationalities in Cyprus has a chance to express themselves and spread ideas that are beyond everyday considerations.</p>
+                        <h2>Theme</h2>
+                        <p class="text-justify">Back in 2019, at our first meeting, the six of us started discussing our theme. We needed something that would encourage our speakers, instead of limiting them. We needed something abstract, but not too vague because we know how overused titles can sound/be sometimes.
+                            “Beyond” sounded fresh, modern and dreamy. When you’re young, you can’t help but wonder what is going to follow school and adolescence. And we can’t think of a lot of things that are more exciting than what is yet to come and be explored!
+                            Thanks to TED and other platforms like it we’ve got a chance to discover something that is beyond the usual for us, beyond the challenges we all face, even beyond our own understanding.
+                            And that’s how it came to us. Everyone needs an opportunity to learn about the things that we see every day, as well as to speak about their problems, the things they are passionate about and their beliefs on a deeper level.
+                            Our theme seems to capture everything: our excitement to know more, our aspirations and our hopes for the future. We hope our theme will unite remarkable speakers and ideas.</p>
                     </div>
                 </div>
             </div>
 
             <div class="shadow-gradient shadow-gradient-red"></div>
 
-            <div class="flex-container">
-                <img src="images/content.png">
+            <div class="flex-container color-changer" data-color="#fffff">
+                <img src="images/content.png" class="popup-img">
 
-                <div class="content">
-                    <h2 id="about">About TED</h2>
+                <div id="about" class="content">
+                    <h2>About TED</h2>
                     <p class="text-justify" style="padding-bottom:0; margin-bottom:0;">TED is a non-profit global speaking platform, where creative individuals unite in their mission to spread ideas, discuss global issues and express their opinions. Here, inspired thinkers are free to share their knowledge and understanding of the world.
                         <br><br>
                         Founded in 1984, TED was the brainchild of Richard Saul Wurman, who cooperated with Harry Marks. In 1990, the TED Conference became an annual event in Monterey, California, attracting a vast and open-minded audience from many disciplines. Given the growing attendance, the years of 2001-2006 witnessed an expansion of the TED family - TEDGlobal (a newly created conference), the TED Prize (winners are granted one wish to change the world), TED Talks (TED content is released online). Once influential minds united and helped to create the conditions necessary for the spreading of ideas, 2012 marked the year of one billion video views of TED Talks. To this day, TED Conferences and Talks continue to inspire, motivate and thrill attendees.
@@ -147,8 +188,7 @@
                 <div class="flex-container">
                     <form>
                         <div class="content">
-                            <h2>Venue & Time are to be announced check the website for updates regarding speakers or signup to our newsletter</h2>
-                            <br>
+                            <h2 style="margin-top: 0">Venue & Time are to be announced check the website for updates regarding speakers or signup to our newsletter</h2>
                         </div>
 
                         <div style="margin: 0 auto; display: flex; justify-content: center;">
@@ -166,7 +206,7 @@
             <h1>Our Team</h1>
             <div class="flex-container">
                 <div class="member">
-                    <div class="image-wrapper">
+                    <div class="image-wrapper popup-img">
                         <img src="images/team/Mariana.jpeg">
                         <div class="image-wrapper-text">
                             <p>Mariana</p>
@@ -178,7 +218,7 @@
                 </div>
 
                 <div class="member">
-                    <div class="image-wrapper">
+                    <div class="image-wrapper popup-img">
                         <img src="images/team/Ksenia.jpeg">
                         <div class="image-wrapper-text">
                             <p>Ksenia</p>
@@ -190,7 +230,7 @@
                 </div>
 
                 <div class="member">
-                    <div class="image-wrapper">
+                    <div class="image-wrapper popup-img">
                         <img src="images/team/Jess.jpeg">
                         <div class="image-wrapper-text">
                             <p>Jess</p>
@@ -202,7 +242,7 @@
                 </div>
 
                 <div class="member">
-                    <div class="image-wrapper">
+                    <div class="image-wrapper popup-img">
                         <img src="images/team/Nadia.jpeg">
                         <div class="image-wrapper-text">
                             <p>Nadia</p>
@@ -213,10 +253,10 @@
                 </div>
 
                 <div class="member">
-                    <div class="image-wrapper">
+                    <div class="image-wrapper popup-img">
                         <img src="images/team/Kate.jpeg">
                         <div class="image-wrapper-text">
-                            <p>Kat</p>
+                            <p>Kat - Co-organizer</p>
                         </div>
                     </div>
                     <p>My name is Kat and I am the “adult” co-organizer of the event. My hobbies include consuming
@@ -225,10 +265,10 @@
                 </div>
 
                 <div class="member">
-                    <div class="image-wrapper">
+                    <div class="image-wrapper popup-img">
                         <img src="images/team/Eleftheria.jpeg">
                         <div class="image-wrapper-text">
-                            <p>Eleftheria</p>
+                            <p>Eleftheria - Lead Organizer</p>
                         </div>
                     </div>
                     <p>Hey, I’m Eleftheria, but you can call me Ria. I am the lead organizer as I consider myself to be
@@ -271,6 +311,8 @@
 
         </section>
     </body>
+
+    <script src="js/join-us-anim-handler.js"></script>
 </html>
 
 <script>
@@ -338,32 +380,5 @@
     function menulocker() {
         toggleClass(document.body, "menu-locker");
         scroll(0, 0);
-    }
-
-    function toggleClass(element, className) {
-        if (element.classList) {
-            element.classList.toggle(className);
-        } else {
-            var classes = element.className.split(" ");
-            var i = classes.indexOf(className);
-
-            if (i >= 0) {
-                classes.splice(i, 1);
-            } else {
-                classes.push(className);
-                element.className = classes.join(" ");
-            }
-        }
-    }
-
-    function removeClass(element, className) {
-        if (element.classList) {
-            element.classList.remove(className);
-        } else {
-            var classes = element.className.split(" ");
-            var i = classes.indexOf(className);
-
-            classes.splice(i, 1);
-        }
     }
 </script>
