@@ -181,6 +181,26 @@ ul, ol {
     background-color: var(--tedx-red);
 }
 
+#close {
+    background-color: var(--tedx-red);
+    border: solid whitesmoke 2px;
+    border-radius: 2px;
+    color: white;
+    font-weight: 900;
+    font-size: 12px;
+    outline: none;
+    padding: 6px 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(0%, -45%);
+    transition: 0.1s;
+}
+
+#close:hover, #close:focus {
+    background-color: var(--tedx-red-dark);
+}
+
 @keyframes fading-in {
     from { opacity: 0; } 
     to { opacity: 1; }

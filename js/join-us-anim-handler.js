@@ -9,6 +9,14 @@ function openModalWindow() {
     joinUsContent.style.animation = "slide-in 1s forwards";
 }
 
+function closeModalWindow() {
+    joinUsWindow.style.animation = "fading-out 0.5s forwards"
+    joinUsWindow.style.webkitAnimationDelay = "0.5s";
+    joinUsContent.style.animation = "slide-out 1s forwards";
+        
+    joinUsWindow.dataset.active = "false";
+ }
+
 joinUsContent.addEventListener("animationend", function() {
     if (joinUsWindow.dataset.active == "false") {
         joinUsWindow.style.display = "none";
@@ -17,10 +25,6 @@ joinUsContent.addEventListener("animationend", function() {
     
 window.onclick = function(event) {
     if (event.target == joinUsWindow) {
-        joinUsWindow.style.animation = "fading-out 0.5s forwards"
-        joinUsWindow.style.webkitAnimationDelay = "0.5s";
-        joinUsContent.style.animation = "slide-out 1s forwards";
-            
-        joinUsWindow.dataset.active = "false";
+        closeModalWindow();
     }
  }
