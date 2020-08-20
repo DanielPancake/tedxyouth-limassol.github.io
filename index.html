@@ -327,7 +327,11 @@
 
             <button onclick="openModalWindow();" class="join-btn">&raquo; Join us! &laquo;</button>
 
-            <p style="font-weight: 900; text-align: center;">Copyright danielpancake 2020</p>
+            <br>
+
+            <p class="copyright">
+                &copy;2020 TEDxYouth@AgiouAndreou. This independent TEDx event is operated under licence from TED.
+            </p>
         </section>
     </body>
 
@@ -375,7 +379,7 @@
         </div>
     </div>
 
-    <div id="beyound" style="cursor: pointer;" onclick="window.scroll(0, 0)">&#x21E1;</div>
+    <div id="beyound" onclick="window.scroll(0, 0)">&uarr;</div>
 
     <script src="js/join-us-anim-handler.js"></script>
 </html>
@@ -420,16 +424,20 @@
         if (window.innerWidth > 800) {
             checkBox.checked = false;
             removeClass(document.body, "menu-locker");
-
-            members();
         }
+
+        members();
     };
 
     window.onscroll = function() {
-        if (window.scrollY + screen.height >= footer.offsetTop - 500) {
-            beyound.style.transform = "translateY(0%)";
-        } else {
+        var screenBottom = window.scrollY + screen.height;
+
+        if (window.scrollY < 200) {
+            beyound.style.bottom = "0";
             beyound.style.transform = "translateY(100%)";
+        } else if (screenBottom >= footer.offsetTop - 800) {
+            beyound.style.bottom = "2vh";
+            beyound.style.transform = "translateY(0)";
         }
 
         for (var i = 0; i < colorChangers.length; i++) {
