@@ -98,7 +98,7 @@
     text-align: center;
 }
 
-#menu-mobile a:hover {
+#menu-mobile :not(.links) a:hover {
     background-color: var(--tedx-red-dark);
 }
 
@@ -146,6 +146,19 @@
 
 #menu-checkbox:checked+label .nav-icon div {
     transform: translateY(16px) scale(0.85);
+}
+
+#mobile-links {
+    bottom: 78px;
+    margin-left: 20%;
+    position: absolute;
+    width: 60%;
+}
+
+@media screen and (max-height: 500px) {
+    #mobile-links {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 800px) {

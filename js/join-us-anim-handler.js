@@ -1,7 +1,7 @@
 var joinUsWindow = document.getElementById("join-us-window");
 var joinUsContent = document.getElementById("join-us-content");
 
-document.getElementById("join-us").onclick = function() {
+function openModalWindow() {
     joinUsWindow.style.display = "block";
     joinUsWindow.dataset.active = "true";
 

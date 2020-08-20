@@ -57,7 +57,21 @@
                             </div>
                         </label>
 
-                    <div id="menu-mobile"></div>
+                    <div id="menu-mobile">
+                        <p class="links" id="mobile-links">
+                            <a href="https://www.facebook.com/TEDxYouth.AgiouAndreou/" target="_blank">
+                                <img src="images/facebook.svg" class="svg-link-white"/>
+                            </a>
+                            
+                            <a href="https://instagram.com/tedxyouth.agiou_andreou?igshid=srnpybbrns2n" target="_blank">
+                                <img src="images/instagram.svg" class="svg-link-white"/>
+                            </a>
+                            
+                            <a href="https://mobile.twitter.com/tedxyouthcy" target="_blank">
+                                <img src="images/twitter.svg" class="svg-link-white"/>
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -65,40 +79,7 @@
         <section id="hero">
             <div class="content">
                 <h1>Example multiline text for TEDx event</h1>
-                <button id="join-us">&raquo; Join us! &laquo;</button>
-                
-                <div id="join-us-window" class="modal-window" data-active=false>
-                    <div id="join-us-content" class="modal-window-content">
-                        <div class="shadow-gradient shadow-gradient-red" style="transform: scaleY(-1);"></div>
-                        <h1>JOIN US!</h1>
-                        <div class="shadow-gradient shadow-gradient-red"></div>
-
-                        <p class="text-justify">You can help by joining our team of volunteers. Your job can be anything at all:</p>
-                        
-                        <ul>
-                            <li>Performing</li>
-                            <li>Making your own speech</li>
-                            <li>Event Management</li>
-                            <li>Marketing & Social Media</li>
-                            <li>Budgeting</li>
-                            <li>Any other skill you might have</li>
-                        </ul>
-
-                        <p class="text-justify">To sign up make sure <a href="https://forms.gle/myZvJsdwuWvGry976">to complete the form</a> or <a href="tel:99156923">contact Jessica Thackeray</a>.
-                            <br><br>
-                            If you want to perform, get in touch with us on any social media / email and tell us about your passion or the idea that you want to present at the TEDxYouth conference this fall.
-                        </p>
-
-                        <div style="margin: 16px 0; width:100%;"></div>
-
-                        <p class="links">
-                            <a href="https://www.facebook.com/TEDxYouth.AgiouAndreou/" target="_blank"><img src="images/facebook.svg" class="svg-link"/></a>
-                            <a href="https://instagram.com/tedxyouth.agiou_andreou?igshid=srnpybbrns2n" target="_blank"><img src="images/instagram.svg" class="svg-link"/></a>
-                            <a href="https://mobile.twitter.com/tedxyouthcy" target="_blank"><img src="images/twitter.svg" class="svg-link"/></a>
-                            <a href="mailto:edxyouth.limassol@gmail.com"><img src="images/email.svg" class="svg-link"/></a>
-                        </p>
-                    </div>
-                </div>
+                <button onclick="openModalWindow();" class="join-btn">&raquo; Join us! &laquo;</button>
             </div>
         </section>
 
@@ -305,12 +286,96 @@
                     <img src="images/sponsors/proudserve_group.png" style="display: block; margin: 0 auto;">
                 </div>
             </div>
-        </section> 
+        </section>
+
+        <div class="shadow-gradient shadow-gradient-black" style="margin-top: 48px; transform: scaleY(-1);"></div>
 
         <section id="footer">
+            <div class="contacts">
+                <dl class="links">
+                    <dt>
+                        <a href="https://www.facebook.com/TEDxYouth.AgiouAndreou/" target="_blank">
+                            <img src="images/facebook.svg" class="svg-link-white"/>
+                        </a>
+                    </dt>
 
+                    <dt>
+                        <a href="https://instagram.com/tedxyouth.agiou_andreou?igshid=srnpybbrns2n" target="_blank">
+                            <img src="images/instagram.svg" class="svg-link-white"/>
+                        </a>
+                    </dt>
+
+                    <dt>
+                        <a href="https://mobile.twitter.com/tedxyouthcy" target="_blank">
+                            <img src="images/twitter.svg" class="svg-link-white"/>
+                        </a>
+                    </dt>
+                </dl>
+
+                <p class="contacts-info">
+                    <a href="tel:99156923" class="text-link">Jessica Thackeray: 99156923</a>
+                    <br>
+                    <a href="mailto:tedxyouth.limassol@gmail.com" class="text-link">tedxyouth.limassol@gmail.com</a>
+                    <br><br>
+                    Example adress line one
+                    <br>
+                    adress line two
+                    <br>
+                    adress line three
+                </p>
+            </div>
+
+            <button onclick="openModalWindow();" class="join-btn">&raquo; Join us! &laquo;</button>
+
+            <p style="font-weight: 900; text-align: center;">Copyright danielpancake 2020</p>
         </section>
     </body>
+
+    <div id="join-us-window" class="modal-window" data-active=false>
+        <div id="join-us-content" class="modal-window-content">
+            <div class="shadow-gradient shadow-gradient-red" style="transform: scaleY(-1);"></div>
+            <h1>JOIN US!</h1>
+            <div class="shadow-gradient shadow-gradient-red"></div>
+
+            <p class="text-justify">You can help by joining our team of volunteers. Your job can be anything at all:</p>
+            
+            <ul>
+                <li>Performing</li>
+                <li>Making your own speech</li>
+                <li>Event Management</li>
+                <li>Marketing & Social Media</li>
+                <li>Budgeting</li>
+                <li>Any other skill you might have</li>
+            </ul>
+
+            <p class="text-justify">To sign up make sure <a href="https://forms.gle/myZvJsdwuWvGry976" class="text-link">to complete the form</a> or <a href="tel:99156923" class="text-link">contact Jessica Thackeray</a>.
+                <br><br>
+                If you want to perform, get in touch with us on any social media / email and tell us about your passion or the idea that you want to present at the TEDxYouth conference this fall.
+            </p>
+
+            <div style="margin: 22px 0; width:100%;"></div>
+
+            <p class="links">
+                <a href="https://www.facebook.com/TEDxYouth.AgiouAndreou/" target="_blank">
+                    <img src="images/facebook.svg" class="svg-link"/>
+                </a>
+                
+                <a href="https://instagram.com/tedxyouth.agiou_andreou?igshid=srnpybbrns2n" target="_blank">
+                    <img src="images/instagram.svg" class="svg-link"/>
+                </a>
+                
+                <a href="https://mobile.twitter.com/tedxyouthcy" target="_blank">
+                    <img src="images/twitter.svg" class="svg-link"/>
+                </a>
+                
+                <a href="mailto:tedxyouth.limassol@gmail.com">
+                    <img src="images/email.svg" class="svg-link"/>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div id="beyound" style="cursor: pointer;" onclick="window.scroll(0, 0)">&#x21E1;</div>
 
     <script src="js/join-us-anim-handler.js"></script>
 </html>
@@ -320,6 +385,10 @@
     var menu = document.getElementById("menu").children;
     var menuMobile = document.getElementById("menu-mobile");
     var checkBox = document.getElementById("menu-checkbox");
+    var beyound = document.getElementById('beyound');
+    var footer = document.getElementById('footer');
+
+    var mobileLinks = document.getElementById('mobile-links');
 
     var colorChangers = Array.from(document.getElementsByClassName("color-changer")).reverse();
     var team = Array.from(document.getElementById("team").querySelector(".flex-container").children);
@@ -348,13 +417,21 @@
     members();
 
     window.onresize = function() {
-        checkBox.checked = false;
-        removeClass(document.body, "menu-locker");
+        if (window.innerWidth > 800) {
+            checkBox.checked = false;
+            removeClass(document.body, "menu-locker");
 
-        members();
+            members();
+        }
     };
 
     window.onscroll = function() {
+        if (window.scrollY + screen.height >= footer.offsetTop - 500) {
+            beyound.style.transform = "translateY(0%)";
+        } else {
+            beyound.style.transform = "translateY(100%)";
+        }
+
         for (var i = 0; i < colorChangers.length; i++) {
             var colorChanger = colorChangers[i];
 
@@ -374,7 +451,7 @@
             removeClass(document.body, "menu-locker");
         }
 
-        menuMobile.appendChild(e);
+        menuMobile.insertBefore(e, mobileLinks);
     }
 
     function menulocker() {

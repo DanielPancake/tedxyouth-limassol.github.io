@@ -113,8 +113,18 @@ ul, ol {
     transition: 0.25s;
 }
 
+.svg-link-white {
+    filter: brightness(0) invert();
+    transition: 0.25s;
+}
+
 .svg-link:hover {
     filter: drop-shadow(-2px 0px 0 black);
+    transform: rotateZ(360deg) scale(2);
+}
+
+.svg-link-white:hover  {
+    filter: brightness(0) invert() drop-shadow(-2px 0px 0 var(--tedx-red));
     transform: rotateZ(360deg) scale(2);
 }
 
@@ -124,10 +134,87 @@ ul, ol {
     margin: 13px 0;
 }
 
-.outline {
-    text-shadow: var(--tedx-red) -1px -1px 0,
-    var(--tedx-red) 1px -1px 0,
-    var(--tedx-red) -1px 1px 0,
-    var(--tedx-red) 1px 1px 0,
-    var(--tedx-red-dark) 2px 2px 0 !important;
+.modal-window {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.modal-window-content {
+    background-color: whitesmoke;
+    border-radius: 2px;
+    max-width: 525px;
+    padding: 20px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 100vh);
+    width: 80%;
+}
+
+.modal-window-content :not(.links) a {
+    color: black;
+    font-weight: 900;
+}
+
+.text-link {
+    background-image: linear-gradient(var(--tedx-red), var(--tedx-red));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    background-size: 100% 2px;
+    color: var(--tedx-red) !important;
+}
+
+.modal-window-content h1 {
+    background-color: var(--tedx-red);
+}
+
+@keyframes fading-in {
+    from { opacity: 0; } 
+    to { opacity: 1; }
+}
+
+@keyframes fading-out {
+    from { opacity: 1; } 
+    to { opacity: 0; }
+}
+
+@keyframes slide-in {
+    70% {
+        filter: none;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        filter: drop-shadow(-5px 5px 0 var(--tedx-red-dark));
+        transform: translate(calc(-50% + 5px), calc(-50% - 5px));
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        filter: drop-shadow(-5px 5px 0 var(--tedx-red-dark));
+        transform: translate(calc(-50% + 5px), calc(-50% - 5px));
+    }
+
+    30% {
+        filter: none;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        transform: translate(-50%, 100vh);
+    }
 }
