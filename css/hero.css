@@ -31,10 +31,10 @@
     box-shadow: var(--tedx-red) 0 0 15px;
     color: white;
     cursor: pointer;
-    font-weight: 700;
     display: block;
-    padding: 18px 72px;
+    font-weight: 700;
     margin: 8px auto;
+    padding: 18px 72px;
     transition: 0.1s;
 }
   
