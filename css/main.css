@@ -15,7 +15,7 @@
 
     --title: 34px;
     --subtitle: 25px;
-    --text: 14px;
+    --text: 16px;
 }
 
 @media screen and (max-width: 600px) {
@@ -24,6 +24,11 @@
         --subtitle: 5vw;
         --text: 3.5vw;
     }
+}
+
+::selection {
+    background: var(--tedx-red-dark);
+    color: white;
 }
 
 body {
@@ -70,6 +75,11 @@ ul, ol {
     margin: 13px 0;
     min-width: 200px;
     padding: 16px;
+}
+
+.background-red {
+    background-color: var(--tedx-red);
+    color: whitesmoke;
 }
 
 .break {
@@ -148,7 +158,7 @@ ul, ol {
 .modal-window-content {
     background-color: whitesmoke;
     border-radius: 2px;
-    max-width: 525px;
+    max-width: 500px;
     padding: 20px;
     position: fixed;
     left: 50%;
@@ -162,7 +172,7 @@ ul, ol {
     font-weight: 900;
 }
 
-.text-link {
+.text-link, .text-link2 {
     background-image: linear-gradient(var(--tedx-red), var(--tedx-red));
     background-position: 0% 100%;
     background-repeat: no-repeat;
@@ -174,7 +184,12 @@ ul, ol {
 
 .text-link:hover {
     background-size: 100% 2px;
-    color: var(--tedx-red) !important;
+    color: var(--tedx-red);
+}
+
+.text-link2:hover {
+    background-size: 100% 2px;
+    text-shadow: var(--tedx-red) -2px 0 0;
 }
 
 .modal-window-content h1 {

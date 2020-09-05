@@ -20,11 +20,6 @@
     min-width: 300px;
 }
 
-#tedx .background-red {
-    background-color: var(--tedx-red);
-    color: whitesmoke;
-}
-
 #tedx input {
     border-radius: 2px;
     box-sizing: border-box;
@@ -122,4 +117,24 @@
     margin: 0 16px;
     min-width: 200px;
     width: 40%;
+}
+
+#volunteers {
+    text-align: right;
+    width: 50%;
+    white-space: nowrap;
+}
+
+#work {
+    white-space: nowrap;
+}
+
+#work p::before{
+    content: "\00A0—\00A0";
+}
+
+@media screen and (max-width: 600px) {
+    .break {
+        width: 0;
+    }
 }

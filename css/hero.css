@@ -1,6 +1,6 @@
 #hero {
     background-image: linear-gradient(rgba(26, 26, 26, 1),
-        rgba(26, 26, 26, 0.25)), url(../images/tedheroimage.png);
+        rgba(26, 26, 26, 0.25)), url(../images/tedheroimage.jpg);
 
     background-position: bottom;
     background-size: cover;
