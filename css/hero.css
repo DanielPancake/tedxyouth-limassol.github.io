@@ -1,4 +1,10 @@
 #hero {
+    background-image: -webkit-gradient(linear,
+        left top, left bottom,
+        from(rgba(26, 26, 26, 1)),
+        to(rgba(26, 26, 26, 0.25))), url(../images/tedheroimage.jpg);
+    background-image: -o-linear-gradient(rgba(26, 26, 26, 1),
+        rgba(26, 26, 26, 0.25)), url(../images/tedheroimage.jpg);
     background-image: linear-gradient(rgba(26, 26, 26, 1),
         rgba(26, 26, 26, 0.25)), url(../images/tedheroimage.jpg);
 
@@ -28,19 +34,23 @@
     background-color: var(--tedx-red);
     border: none;
     border-radius: 2px;
-    box-shadow: var(--tedx-red) 0 0 15px;
+    -webkit-box-shadow: var(--tedx-red) 0 0 15px;
+            box-shadow: var(--tedx-red) 0 0 15px;
     color: white;
     cursor: pointer;
     display: block;
     font-weight: 700;
     margin: 8px auto;
     padding: 18px 72px;
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
     transition: 0.1s;
 }
   
 .join-btn:hover, .join-btn:focus {
     background-color: var(--tedx-red-dark);
-    box-shadow: var(--tedx-black) 2px 2px 0;
+    -webkit-box-shadow: var(--tedx-black) 2px 2px 0;
+            box-shadow: var(--tedx-black) 2px 2px 0;
 }
 
 @media screen and (max-width: 800px) {

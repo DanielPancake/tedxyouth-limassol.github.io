@@ -1,18 +1,27 @@
 #tedx .flex-container, #team .flex-container, #sponsors .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     margin: 0 auto;
     max-width: 1080px;
     padding: 4px 32px;
 }
 
 #tedx .flex-container img, #sponsors .flex-container img {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 #tedx div.content, #sponsors div.content {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 
 #tedx div.content p, #sponsors div.content p {
@@ -22,7 +31,8 @@
 
 #tedx input {
     border-radius: 2px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 #tedx input[type=text] {
@@ -41,6 +51,8 @@
     cursor: pointer;
     font-weight: 700;
     padding: 16px 24px;
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
     transition: 0.1s;
     max-width: 200px;
 }
@@ -51,11 +63,14 @@
 }
 
 #team .flex-container {
-    flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
 }
 
 #team .member {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     margin: 0 8px 32px 8px;
     min-width: 200px;
     padding: 0 8px;
@@ -80,6 +95,8 @@
     margin: 0 auto;
     border-radius: 2px;
     position: relative;
+    -webkit-transition: .25s;
+    -o-transition: .25s;
     transition: .25s;
     max-width: 300px;
 }
@@ -95,6 +112,8 @@
     overflow: hidden;
     padding: 0;
     position: absolute;
+    -webkit-transition: 0.75s;
+    -o-transition: 0.75s;
     transition: 0.75s;
     width: 100%;
 }
@@ -110,6 +129,8 @@
     background-position: bottom;
     margin: 0 16px;
     min-height: 400px;
+    -webkit-transition: .25s;
+    -o-transition: .25s;
     transition: .25s;
     width: 300px;
 }
@@ -121,12 +142,27 @@
 }
 
 #volunteers-wrapper {
-    animation: paralax 20s ease-in-out infinite;
+    -webkit-animation: paralax 20s ease-in-out infinite;
+            animation: paralax 20s ease-in-out infinite;
     background: url(../images/bga.jpg);
     background-position: bottom;
     background-size: cover;
     color: white;
     text-shadow: black 0 2px 2px;
+}
+
+@-webkit-keyframes paralax {
+    0% {
+        background-position-x: 50px;
+    }
+
+    50% {
+        background-position-x: -50px;
+    }
+
+    100% {
+        background-position-x: 50px;
+    }
 }
 
 @keyframes paralax {

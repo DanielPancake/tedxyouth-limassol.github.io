@@ -47,7 +47,11 @@
     font-weight: 900;
     position: fixed;
     right: 0;
-    transform: translateY(calc(100% + 2vh));
+    -webkit-transform: translateY(calc(100% + 2vh));
+        -ms-transform: translateY(calc(100% + 2vh));
+            transform: translateY(calc(100% + 2vh));
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
     transition: 0.25s;
 }
 
