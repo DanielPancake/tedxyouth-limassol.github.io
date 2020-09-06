@@ -218,12 +218,12 @@ ul, ol {
 
 .text-link:hover {
     background-size: 100% 2px;
-    color: var(--tedx-red);
+    color: var(--tedx-red) !important;
 }
 
 .text-link2:hover {
     background-size: 100% 2px;
-    text-shadow: var(--tedx-red) -2px 0 0;
+    text-shadow: var(--tedx-red) 0 0 5px;
 }
 
 .modal-window-content h1 {
