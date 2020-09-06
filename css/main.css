@@ -86,7 +86,6 @@ ul, ol {
     background: linear-gradient(180deg, white 0%, var(--tedx-red) 20%, white 80%);
     border: none;
     border-radius: 2px;
-    margin: 8px;
     width: 3px;
 }
 

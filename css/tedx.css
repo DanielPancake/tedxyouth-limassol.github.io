@@ -58,6 +58,7 @@
     flex: 1;
     margin: 0 8px 32px 8px;
     min-width: 200px;
+    padding: 0 8px;
 }
 
 #team .member p {
@@ -119,6 +120,29 @@
     width: 40%;
 }
 
+#volunteers-wrapper {
+    animation: paralax 20s ease-in-out infinite;
+    background: url(../images/bga.jpg);
+    background-position: bottom;
+    background-size: cover;
+    color: white;
+    text-shadow: black 0 2px 2px;
+}
+
+@keyframes paralax {
+    0% {
+        background-position-x: 50px;
+    }
+
+    50% {
+        background-position-x: -50px;
+    }
+
+    100% {
+        background-position-x: 50px;
+    }
+}
+
 #volunteers {
     text-align: right;
     width: 50%;
@@ -131,10 +155,4 @@
 
 #work p::before{
     content: "\00A0—\00A0";
-}
-
-@media screen and (max-width: 600px) {
-    .break {
-        width: 0;
-    }
 }
