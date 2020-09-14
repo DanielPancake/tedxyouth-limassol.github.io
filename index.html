@@ -181,13 +181,13 @@
 
             <div class="background-red" style="padding: 32px 0;">
                 <div class="flex-container">
-                    <form>
+                    <form onsubmit="send(); return false;">
                         <div class="content">
                             <h2 style="margin-top: 0">Venue & Time are to be announced check the website for updates regarding speakers or signup to our newsletter</h2>
                         </div>
 
                         <div style="margin: 0 auto; display: flex; justify-content: center;">
-                            <input type="text" placeholder="Email address" name="mail" required>
+                            <input type="email" placeholder="Email address" name="mail" id="mail" required>
                             <input type="submit" value="Subscribe">
                         </div>
                     </form>
@@ -457,6 +457,7 @@
     var checkBox = document.getElementById("menu-checkbox");
     var beyound = document.getElementById('beyound');
     var footer = document.getElementById('footer');
+    var email = document.getElementById('mail');
 
     var mobileLinks = document.getElementById('mobile-links');
 
@@ -533,5 +534,21 @@
     function menulocker() {
         toggleClass(document.body, "menu-locker");
         scroll(0, 0);
+    }
+
+    function send() {
+        var xhr = new XMLHttpRequest();
+        var data = { "email": email.value };
+
+        // Free php hosting
+        xhr.open("POST", "http://glaciological-vendo.000webhostapp.com", true);
+
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                alert(this.responseText);
+            }
+        }
+
+        xhr.send(JSON.stringify(data));
     }
 </script>
