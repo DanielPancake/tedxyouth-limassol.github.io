@@ -183,18 +183,39 @@ ul, ol {
     z-index: 1;
 }
 
+.scrollable-content {
+    padding: 8px;
+    max-height: 75vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background-color: var(--tedx-red);
+    border-radius: 10px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    background-color: black;
+    border-radius: 10px;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
 .modal-window-content {
     background-color: whitesmoke;
     border-radius: 2px;
-    max-width: 500px;
-    padding: 20px;
+    max-width: 600px;
+    padding: 1vw 1vw 1vw 2vw;
     position: fixed;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, 100vh);
         -ms-transform: translate(-50%, 100vh);
             transform: translate(-50%, 100vh);
-    width: 80%;
+    width: 85%;
 }
 
 .modal-window-content :not(.links) a {
@@ -228,6 +249,53 @@ ul, ol {
 
 .modal-window-content h1 {
     background-color: var(--tedx-red);
+}
+
+.field {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    height: 64px;
+}
+
+.field p {
+    text-align: center;
+    font-weight: 700;
+    padding: 0 8px 0 10px;
+    width: 20%;
+    min-width: 60px;
+}
+
+.form input {
+    border-radius: 2px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.form .basic {
+    border: inset 3px red;
+    margin-right: 16px;
+    padding: 8px 10px;
+    width: 80%;
+}
+
+.form input[type=submit] {
+    background-color: var(--tedx-red);
+    border: solid 3px var(--tedx-red);
+    border-radius: 2px;
+    color: whitesmoke;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 8px 24px;
+    margin: 4px 32px;
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+}
+
+.form input[type=submit]:hover {
+    background-color: var(--tedx-red-dark);
+    border: inset 3px red;
 }
 
 #close {

@@ -50,6 +50,10 @@
                     </div>
 
                     <div class="menu-option">
+                        <a href="#speakers">Speakers</a>
+                    </div>
+
+                    <div class="menu-option">
                         <a href="#team">Our Team</a>
                     </div>
 
@@ -90,7 +94,7 @@
             <div class="content">
                 <h1>TEDxYouth is happening in Cyprus</h1>
                 <br><br>
-                <button onclick="openModalWindow();" class="join-btn">&raquo; Join us! &laquo;</button>
+                <button onclick="openModalWindow();" class="join-btn">&raquo; Register for the event! &laquo;</button>
             </div>
         </section>
 
@@ -179,25 +183,35 @@
 
             <div class="shadow-gradient shadow-gradient-red" style="transform: scaleY(-1);"></div>
 
-            <div class="background-red" style="padding: 32px 0;">
+            <div class="background-red color-changer" data-color="#e62b1e">
                 <div class="flex-container">
-                    <form onsubmit="send(); return false;">
-                        <div class="content">
-                            <h2 style="margin-top: 0">Venue & Time are to be announced check the website for updates regarding speakers or signup to our newsletter</h2>
-                        </div>
+                    <div class="content" id="speakers">
+                        <h1>Our speakers</h1>
+                        <h2>An Anxious Girl and Beyond Herself Converse, Anna Maria Loysha</h2>
+                        <p class="text-justify">Born in Limassol, but of Russian heritage, Anna Maria is an 18-year old graduating high school student. Passionate about the arts, she plans on studying animation in university abroad next year. In her talk, Anna Maria offers a visual and creative exploration of anxiety, a topic that is familiar to most young people. Talking about some of the most nerve-racking months of her life, she unravels her inner world, gives a poetic perspective on mental health and a hopeful verdict, all inspired by her faith and personal experiences.</p>
 
-                        <div style="margin: 0 auto; display: flex; justify-content: center;">
-                            <input type="email" placeholder="Email address" name="mail" id="mail" required>
-                            <input type="submit" value="Subscribe">
-                        </div>
-                    </form>
+                        <h2>Beyond What Our Eyes Perceive, Phivos Phylactou</h2>
+                        <p class="text-justify">Phivos is currently a PhD researcher at Cyprus University of Technology. He considers himself a science communicator, an athlete, a book lover and a volunteer. He holds a Bachelor’s degree in Psychology and this, along with his passion for research, made him curious about the neuroscientific basis of cognitive processes. Currently, he is investigating healthy individuals to discover basic neuroscientific evidence about memory and perception with the use of non-invasive brain stimulation techniques, brain imaging, and behavioural experiments. He is going to explain how we don’t just see with our eyes, but also with our brain. But how do we know that? How does the brain see? And, how do we understand this using science?</p>
+
+                        <h2>Resetting the Way We Tackle Food Waste, Sotia Papapetrou</h2>
+                        <p class="text-justify">Born in Limassol, Sotia is a 16-year-old high school student, who has lived her entire life in Cyprus, while traveling around the world from a young age contributed to broadening her perspective on global environmental issues. Later on in her life, this turned into a source of concern, research and involvement in these problems. She is a member of a youth volunteer group that acts for multiple causes, including the protection of the environment. In her talk, she unveils one of the most pressing environmental issues of our time, food waste. She delves into the shocking data of wasted food and sounds the warning bell, as large quantities of food end up in trash heaps. She believes that we are at the tipping point for ending food waste and calls for citizen action.</p>
+
+                        <h2>How the World Ended Up on Your Plate, Jack Givhan</h2>
+                        <p class="text-justify">Jack is a 17-year-old high school senior, born and raised in Limassol, Cyprus. For the past few years, he’s been cooking at home with a focus on trying as many new recipes from as many different cuisines as possible. Through researching recipes and their historical backgrounds, he’s become fascinated by the way each culture’s ingredients are interconnected in ways that we all take for granted. In in his talk, he hopes to unveil some of the historical ties of our favourite dishes and the way we can learn from these to better our lives in general.</p>
+
+                        <h2>A Common Misconception, Peter Michaylov</h2>
+                        <p class="text-justify">Peter is a 16-year-old high achieving student and a rail enthusiast from Limassol. Having great interest in railway systems all over the world, he particularly favours is the metro of Moscow, the city where he was born. However, there is more to Peter than grades and the passion for metro systems. He really enjoys watching cartoons – an activity that, he believes, is often greatly stigmatised as being “only for small children”. In his speech, Peter will fight the “misconception that, sadly, is quite widespread” and “shouldn't be”.</p>
+
+                        <h2>Tomorrow, Kiara Pinto</h2>
+                        <p class="text-justify">Kiara is the youngest speaker in our event. In her own words, she “loves to read and is a bit of a cinephile with a love for theatre.” She has a passion for “anything historical or political” so when Covid-19 appeared, along with it came a lot of questions. After the pandemic was announced her confusion overtook her along with a thirst for knowledge. She decided to take a walk through our past... And you are welcome to join her!</p>
+                    </div>
                 </div>
             </div>
 
             <div class="shadow-gradient shadow-gradient-red"></div>
         </section>
         
-        <section id="team">
+        <section id="team" class="color-changer" data-color="white">
             <h1>Our Team</h1>
             <div class="flex-container">
                 <div class="member">
@@ -325,7 +339,7 @@
             <div class="shadow-gradient shadow-gradient-red"></div>
         </section>
 
-        <section id="sponsors">
+        <section id="sponsors" class="color-changer" data-color="white">
             <h1>Sponsors</h1>
             <h2>We are proudly sponsored by...</h2>
 
@@ -390,12 +404,12 @@
                 </p>
             </div>
 
-            <button onclick="openModalWindow();" class="join-btn">&raquo; Join us! &laquo;</button>
+            <button onclick="openModalWindow();" class="join-btn">&raquo; Register for the event! &laquo;</button>
 
             <br>
 
             <p class="copyright">
-                &copy;2020 TEDxYouth@AgiouAndreou. This independent TEDx event is operated under licence from TED.
+                &copy;2020-2021 TEDxYouth@AgiouAndreou. This independent TEDx event is operated under licence from TED.
             </p>
         </section>
     </body>
@@ -403,45 +417,59 @@
     <div id="join-us-window" class="modal-window" data-active=false>
         <div id="join-us-content" class="modal-window-content">
             <button id="close" onclick="closeModalWindow();">x</button>
-            
-            <div class="shadow-gradient shadow-gradient-red" style="transform: scaleY(-1);"></div>
-            <h1>JOIN US!</h1>
-            <div class="shadow-gradient shadow-gradient-red"></div>
-            
-            <p class="text-justify">You could help by joining the team of volunteers. Your job could be anything at all:</p>
-
-            <ul>
-                <li>Performing</li>
-                <li>Public speaking </li>
-                <li>Stage Management</li>
-                <li>Marketing & Social media</li>
-                <li>Finance</li>
-                <li>Other</li>
-            </ul>
-
-            <p class="text-justify">
-                Get in touch with us on social media or <a href="mailto:tedxyouth.limassol@gmail.com" class="text-link">via email</a> and take part in organising a TEDxYouth conference this fall.
-            </p>
-
-            <div style="margin: 22px 0; width:100%;"></div>
-
-            <p class="links">
-                <a href="https://www.facebook.com/TEDxYouth.AgiouAndreou/" target="_blank">
-                    <img src="images/facebook.svg" class="svg-link"/>
-                </a>
+            <div class="scrollable-content">
+                <div class="shadow-gradient shadow-gradient-red" style="transform: scaleY(-1);"></div>
+                <h1>JOIN US!</h1>
+                <div class="shadow-gradient shadow-gradient-red"></div>
                 
-                <a href="https://instagram.com/tedxyouth.agiou_andreou?igshid=srnpybbrns2n" target="_blank">
-                    <img src="images/instagram.svg" class="svg-link"/>
-                </a>
+                <p class="text-justify">TedxYouth@AgiouAndreou, the first ever TedxYouth event to be held in Cyprus will be <b>FREE</b> to attend and open to anyone interested.</p>
+                <p class="text-justify">To register, simply put your contact details below and soon you will receive a confirmation.</p>
+                <p class="text-justify">We are really excited to welcome you <b>on Saturday, February 6, 2021 online</b>.</p>
+
+                <div class="shadow-gradient shadow-gradient-red" style="transform: scaleY(-1);"></div>
+
+                <div class="background-red form">
+                    <form style="margin: 0 auto; display: flex; flex-direction: column;" onsubmit="send(); return false;">
+                        <div class="field">
+                            <p>Full name: </p>
+                            <input required type="text" id="fname" class="basic" placeholder="First name / Last name">
+                        </div>
+                        <div class="field">
+                            <p>Email: </p>
+                            <input required type="email" id="email" class="basic" placeholder="example@inbox.com">
+                        </div>
+                        <div class="field">
+                            <p>Phone number: </p>
+                            <input required type="tel" id="phone" class="basic" required placeholder="123-45-678">
+                        </div>
+                        <input type="submit" value="Register">
+                    </form>
+                </div>
                 
-                <a href="https://mobile.twitter.com/tedxyouthcy" target="_blank">
-                    <img src="images/twitter.svg" class="svg-link"/>
-                </a>
+                <div class="shadow-gradient shadow-gradient-red"></div>
+
+                <p class="text-justify"><b>Please, register by 3/02/21 as the number of places is limited.</b></p>
                 
-                <a href="mailto:tedxyouth.limassol@gmail.com">
-                    <img src="images/email.svg" class="svg-link"/>
-                </a>
-            </p>
+                <div style="margin: 18px 0; width:100%;"></div>
+
+                <p class="links">
+                    <a href="https://www.facebook.com/TEDxYouth.AgiouAndreou/" target="_blank">
+                        <img src="images/facebook.svg" class="svg-link"/>
+                    </a>
+                    
+                    <a href="https://instagram.com/tedxyouth.agiou_andreou?igshid=srnpybbrns2n" target="_blank">
+                        <img src="images/instagram.svg" class="svg-link"/>
+                    </a>
+                    
+                    <a href="https://mobile.twitter.com/tedxyouthcy" target="_blank">
+                        <img src="images/twitter.svg" class="svg-link"/>
+                    </a>
+                    
+                    <a href="mailto:tedxyouth.limassol@gmail.com">
+                        <img src="images/email.svg" class="svg-link"/>
+                    </a>
+                </p>
+            </div>
         </div>
     </div>
 
@@ -457,7 +485,10 @@
     var checkBox = document.getElementById("menu-checkbox");
     var beyound = document.getElementById('beyound');
     var footer = document.getElementById('footer');
-    var email = document.getElementById('mail');
+
+    var email = document.getElementById('email');
+    var phone = document.getElementById('phone');
+    var fname = document.getElementById('fname');
 
     var mobileLinks = document.getElementById('mobile-links');
 
@@ -538,10 +569,10 @@
 
     function send() {
         var xhr = new XMLHttpRequest();
-        var data = { "email": email.value };
-
-        // Free php hosting
-        xhr.open("POST", "https://glaciological-vendo.000webhostapp.com", true);
+        var data = { "email": email.value,
+                     "phone": phone.value,
+                     "fname":  fname.value };
+        xhr.open("POST", "https://rocky-cove-20756.herokuapp.com/register", true);
 
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {

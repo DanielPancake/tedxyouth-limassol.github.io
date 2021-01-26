@@ -90,7 +90,7 @@
     height: calc(100vh - 80px);
     left: 0;
     position: absolute;
-    top: 118px;
+    top: 80px;
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
             transform: translateX(-100%);
@@ -179,7 +179,7 @@
 }
 
 #mobile-links {
-    bottom: 78px;
+    bottom: 16px;
     margin-left: 20%;
     position: absolute;
     width: 60%;
