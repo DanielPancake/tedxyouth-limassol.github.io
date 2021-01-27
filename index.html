@@ -442,7 +442,7 @@
                             <p>Phone number: </p>
                             <input required type="tel" id="phone" class="basic" required placeholder="123-45-678">
                         </div>
-                        <input type="submit" value="Register">
+                        <input type="submit" value="Register" id="register">
                     </form>
                 </div>
                 
@@ -483,12 +483,13 @@
     var menu = document.getElementById("menu").children;
     var menuMobile = document.getElementById("menu-mobile");
     var checkBox = document.getElementById("menu-checkbox");
-    var beyound = document.getElementById('beyound');
-    var footer = document.getElementById('footer');
+    var beyound = document.getElementById("beyound");
+    var footer = document.getElementById("footer");
 
-    var email = document.getElementById('email');
-    var phone = document.getElementById('phone');
-    var fname = document.getElementById('fname');
+    var email = document.getElementById("email");
+    var phone = document.getElementById("phone");
+    var fname = document.getElementById("fname");
+    var register = document.getElementById("register");
 
     var mobileLinks = document.getElementById('mobile-links');
 
@@ -577,9 +578,12 @@
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 alert(this.responseText);
+                register.disabled = false;
+                closeModalWindow();
             }
         }
 
         xhr.send(JSON.stringify(data));
+        register.disabled = true;
     }
 </script>
