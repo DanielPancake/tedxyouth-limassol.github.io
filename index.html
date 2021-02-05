@@ -93,8 +93,6 @@
         <section id="hero">
             <div class="content">
                 <h1>TEDxYouth is happening in Cyprus</h1>
-                <br><br>
-                <button onclick="openModalWindow();" class="join-btn">&raquo; Register for the event! &laquo;</button>
             </div>
         </section>
 
@@ -404,8 +402,6 @@
                 </p>
             </div>
 
-            <button onclick="openModalWindow();" class="join-btn">&raquo; Register for the event! &laquo;</button>
-
             <br>
 
             <p class="copyright">
@@ -566,24 +562,5 @@
     function menulocker() {
         toggleClass(document.body, "menu-locker");
         scroll(0, 0);
-    }
-
-    function send() {
-        var xhr = new XMLHttpRequest();
-        var data = { "email": email.value,
-                     "phone": phone.value,
-                     "fname":  fname.value };
-        xhr.open("POST", "https://rocky-cove-20756.herokuapp.com/register", true);
-
-        xhr.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                alert(this.responseText);
-                register.disabled = false;
-                closeModalWindow();
-            }
-        }
-
-        xhr.send(JSON.stringify(data));
-        register.disabled = true;
     }
 </script>
